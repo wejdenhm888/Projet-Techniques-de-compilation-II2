@@ -1,0 +1,43 @@
+#ifndef TOKENS_H
+#define TOKENS_H
+
+/* codes des tokens pour le lexer / parser */
+
+enum {
+    fin = 0,
+
+    /* mots-clés */
+    program_ = 1,
+    var_     = 2,
+    integer_ = 3,
+    char_    = 4,
+    begin_   = 5,
+    end_     = 6,
+    if_      = 7,
+    then_    = 8,
+    else_    = 9,
+    while_   = 10,
+    do_      = 11,
+    read_    = 12,
+    readln_  = 13,
+    write_   = 14,
+    writeln_ = 15,
+
+    /* ponctuation / opérateurs */
+    pvirg      = 20, /* ; */
+    virgule    = 21, /* , */
+    parouv     = 22, /* ( */
+    parfer     = 23, /* ) */
+    point      = 24, /* . */
+    deux_points= 25, /* : */
+    assign     = 26, /* := */
+    opadd      = 27, /* + - */
+    opmul      = 28, /* * / */
+    oprel      = 29, /* < > = <= >= <> = */
+
+    /* tokens non-réservés */
+    id = 100, /* identificateur */
+    nb = 101  /* nombre */
+};
+
+#endif /* TOKENS_H */
